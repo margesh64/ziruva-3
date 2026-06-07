@@ -4,6 +4,7 @@ import Script from "next/script";
 import SecurityLayer from "@/components/SecurityLayer";
 import { CartProvider } from "@/context/CartContext";
 import CartDrawer from "@/components/CartDrawer";
+import { Analytics } from "@vercel/analytics/next";
 
 const siteUrl = "https://ziruvaofficial.com";
 
@@ -400,6 +401,7 @@ export default function RootLayout({
           <CartDrawer />
           {children}
         </CartProvider>
+        <Analytics />
       </body>
     </html>
   );
